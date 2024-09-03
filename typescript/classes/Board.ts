@@ -81,7 +81,7 @@ export default class Board {
           
               let offsets = [
       [[0, 0], [0, 1], [0, 2],[0, 3]],  // horizontal win
-      [[0, 0], [1, 0], [2, 0],[0, 3]],  // vertical win
+      [[0, 0], [1, 0], [2, 0],[3, 0]],  // vertical win [0, 3] till 3, 0 borde vara rätt såg efter commit...
       [[0, 0], [1, 1], [2, 2],[3, 3]],  // vänster upp till höger nere
       [[0, 0], [1, -1], [2, -2],[3, -3]] // höger upp till vänster nere
           ];
