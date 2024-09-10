@@ -5,21 +5,29 @@ export default class Player {
   name: string;
   color: string;
   board: Board;
-  //isComputer: boolean;
+  isComputer: boolean;
 
   //constructor(name: string, color: string, board: Board, isComputer: boolean = false)
 
-  constructor(name: string, color: string, board: Board,) {
+  constructor(name: string, color: string, board: Board, isComputer: boolean = false) {
     this.name = name;
     this.color = color;
     this.board = board;
-    //this.isComputer = isComputer;
+    this.isComputer = isComputer;
   }
 
-  // makeComputerMove(): Array<number> {
-  //   // look at the board and calculate a move based on 
-  //   // the curent board status
-  //   return [1, 1];
+  // makeComputerMove(): number {
+  //   // 
+  //   if (!this.board) {
+  //   console.log("Board not vaild!"); // Detta visas
+  //   return -1;
+  //   }
+  //   let validMoves = this.board.matrix[0].map((_col, index) => index).filter(col => this.board.matrix[0][col] === ' ');
+  //   let randomIndex = Math.floor(Math.random() * validMoves.length);
+  //   return validMoves[randomIndex];
   // }
-
+  
+  // makeComputerMove(): number {
+  
+  // }
 }

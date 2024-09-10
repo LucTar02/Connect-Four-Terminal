@@ -30,7 +30,7 @@ export default class Board {
       );
   }
   
-  makeMove(color: string,  column: number): boolean {
+  makeMove(color: string,  column: number): boolean{
     // don't make any move if the game is over
     if (this.gameOver) { return false; }
     // check that the color is X or O - otherwise don't make the move
