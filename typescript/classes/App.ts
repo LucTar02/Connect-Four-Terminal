@@ -38,7 +38,7 @@ export default class App {
   startGameLoop(): void {
       if (!this.board.gameOver) {
         //console.clear();
-        console.log('game-loop');
+        //console.log('game-loop');
         this.board.render();
         let player = this.board.currentPlayerColor === 'X'
           ? this.playerX : this.playerO;
@@ -51,7 +51,7 @@ export default class App {
             column = Math.floor(Math.random() * 6);
             if (this.board.matrix[0][column] === ' ') {
               validMove = true;
-              console.log(`Player Color: ${player.color}, Column: ${column}`);
+              console.log(`Player Color: ${player.color}, Column: ${column + 1}`);
             }
           }
           this.board.makeMove(player.color, column,);
@@ -75,7 +75,7 @@ export default class App {
   whoHasWonOnGameOver(): void {
     // the game is over, tell the player who has one or if we have a draw
     //console.clear();
-    console.log('who-won');
+    //console.log('who-won');
     this.board.render();
     if (this.board.winner) {
       let winningPlayer = (this.board.winner === 'X' ? this.playerX : this.playerO);

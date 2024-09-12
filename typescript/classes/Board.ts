@@ -37,15 +37,8 @@ export default class Board {
     if (color !== 'X' && color !== 'O') { return false; }
     // check that the color matches the player's turn - otherwise don't make the move
     if (color !== this.currentPlayerColor) { return false; }
-    // check that the row and column are numbers - otherwise don't make the move
-    //if (isNaN(row) || isNaN(column)) { return false; }
+    // check that the column are numbers - otherwise don't make the move
     if (isNaN(column)) { return false; }
-    
-    // check that the row is between 0 and 2 - otherwise don't make the move
-    //if (this.matrix[row][column] !== ' ') { return false; }
-    
-    //if (row < 0 || row >= this.matrix.length) { return false; }
-
     // check that the column is between 0 and matrix[0] - otherwise don't make the move
     if (column < 0 || column >= this.matrix[0].length) { return false; }
     // check that the position is empty - otherwise don't make the move
